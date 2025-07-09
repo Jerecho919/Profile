@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jerecho Rebusio - Web Profile</title>
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --background: #f5f7fa;
+      --card: #ffffff;
+      --text: #333;
+      --border: #ccc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      margin-top: 1rem;
+    }
+
+    .about img {
+      width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 1rem auto;
+    }
+
+    .about p {
+      font-size: 1.3rem;
+      line-height: 1.9;
+      color: #444;
+      text-align: center;
+    }
+
+    .about ul {
+      font-size: 1.2rem;
+      font-weight: bold;
+      list-style-type: square;
+      padding-left: 2rem;
+      margin-top: 1rem;
+      color: #222;
+    }
+
+    .about a {
+      font-size: 1.1rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .about a:hover {
+      text-decoration: underline;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 1rem;
+      display: block;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #084298;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: #fff;
+      margin-top: 2rem;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* ⭐ Star Rating CSS */
+    .star-rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: start;
+      margin-top: 0.5rem;
+    }
+
+    .star-rating input {
+      display: none;
+    }
+
+    .star-rating label {
+      font-size: 2rem;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .star-rating input:checked ~ label {
+      color: gold;
+    }
+
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+      color: gold;
+    }
+
+    /* Optional: Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    .checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+  </style>
+</head>
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="top">
+    <h1>Jerecho Rebusio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#contact">Contact</a>
+      <a href="#feedback">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="home">
+    <div class="card about">
+      <h2>About Me</h2>
+      <img src="Jerecho.jpg" alt="Jerecho Rebusio" />
+      <p>Hello! I’m <strong>Jerecho Rebusio</strong>, a student of ITE ELEC1 with a passion for creating smart and practical systems using technology.</p>
+<p>I’ve built simple ordering systems using C++, managed payroll databases with SQL, and explored Java for backend logic. I enjoy turning code into solutions that work in real-life scenarios, especially in point-of-sale and small business setups.</p>
+
+          <h3>Skills</h3>
+    <ul>
+      <li>Basic Java</li>
+      <li>SQL for simple payroll systems</li>
+      <li>C++ for Point-of-Sale (POS) ordering systems</li>
+    </ul>
+
+    <h3>Connect with Me</h3>
+    <ul>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Gmail</a></li>
+    </ul>
+
+    
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact">
+    <div class="card">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name" />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com" />
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required placeholder="What is your message about?" />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <section id="feedback">
+    <div class="card">
+      <h2>Feedback</h2>
+      <form>
+
+        <!-- ⭐ Star Rating Section -->
+        <label>Rate my page:</label>
+        <div class="star-rating">
+          <input type="radio" id="star5" name="rating" value="5" required><label for="star5">★</label>
+          <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+          <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+          <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+          <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+        </div>
+
+        <label for="type">Type of Feedback:</label>
+        <select id="type" name="type" required>
+          <option value="">-- Select --</option>
+          <option value="bug">Bug Report</option>
+          <option value="suggestion">Suggestion</option>
+          <option value="praise">Praise</option>
+        </select>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" required></textarea>
+
+       <div style="margin: 1rem 0;">
+  <input type="checkbox" id="agree" required />
+  <label for="agree">I agree to the terms and conditions</label>
+</div>
+
+
+
+
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Jerecho Rebusio. All rights reserved. <a href="#top">Back to Top</a></p>
+  </footer>
+
+</body>
+</html>
